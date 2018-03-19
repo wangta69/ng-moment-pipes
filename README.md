@@ -1,4 +1,4 @@
-# ng-pipe-filter
+# ng-moment-pipes
 Tested for angular5
 
 ## Installation
@@ -7,7 +7,7 @@ npm install ng-moment-pipes
 ```
 ## How to use
 
-### imports all pipe modules
+### imports
 ``` app.module.ts
 import { MomentPipesModule } from 'ng-moment-pipes'
 @NgModule({
@@ -15,7 +15,7 @@ import { MomentPipesModule } from 'ng-moment-pipes'
 })
 ```
 
-### imports partial pipe modules
+###
 ``` app.html
 {{datetime | moment : 'YYYY-MM-DD HH:mm'}} <!-- datetime is unixtime like 1592345678 -->
 {{datetime | momentUnix : 'YYYY-MM-DD HH:mm'}}<!-- datetime is normal like 1592345678 -->

@@ -5,28 +5,19 @@ Tested for angular5
 ```
 npm install ng-moment-pipes
 ```
-
-
 ## How to use
 
 ### imports all pipe modules
 ``` app.module.ts
-import { StringPipesModule } from 'ng-pipe-filter'
+import { MomentPipesModule } from 'ng-moment-pipes'
 @NgModule({
-    imports: [ StringPipesModule ]
+    imports: [ MomentPipesModule ]
 })
 ```
 
 ### imports partial pipe modules
-``` app.module.ts
-import { PipesFiltersModule } from 'ng-pipe-filter'
-@NgModule({
-    imports: [ PipesFiltersModule ]
-})
+``` app.html
+{{datetime | moment : 'YYYY-MM-DD HH:mm'}} <!-- datetime is unixtime like 1592345678 -->
+{{datetime | momentUnix : 'YYYY-MM-DD HH:mm'}}<!-- datetime is normal like 1592345678 -->
+{{msg.created_at | momentRelative}}<!--out put will be a hour ago like that -->
 ```
-
-## StringPipesModule
-### Nl2brPipe
-- change newline to br tag
-### stripTags
-- remove html tag

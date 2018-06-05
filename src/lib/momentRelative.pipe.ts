@@ -8,8 +8,7 @@ import moment from 'moment';
 @Pipe({name: 'momentRelative'})
 export class MomentRelativePipe implements PipeTransform {
     transform(value: Date | moment.Moment, ...args: any[]): any {
-        let [format] = args;
-        //return moment(value).format(format);
+        const [format] = args;
         return moment(value, format).fromNow();
     }
 }
@@ -22,9 +21,8 @@ export class MomentRelativePipe implements PipeTransform {
 */
 @Pipe({name: 'momentRelativeOf'})
 export class MomentRelativeOfPipe implements PipeTransform {
-    transform(of:string, val: any): any {
-        //return moment(value).format(format);
-        switch(of){
+    transform(of: string, val: any): any {
+        switch (of) {
             case 'startOf': return moment().startOf(val).fromNow();
             case 'endOf': return moment().startOf(val).fromNow();
         }

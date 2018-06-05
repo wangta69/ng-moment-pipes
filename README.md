@@ -9,7 +9,7 @@ npm install ng-moment-pipes
 
 ### imports
 ``` app.module.ts
-import { MomentPipesModule } from 'ng-moment-pipes'
+import { MomentPipesModule } from 'ng-moment-pipes';
 @NgModule({
     imports: [ MomentPipesModule ]
 })

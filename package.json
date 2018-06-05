@@ -1,38 +1,23 @@
 {
   "name": "ng-moment-pipes",
-  "version": "1.0.1",
-  "description": "pipes and filters for angular",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "dependencies": {
-    "@angular/common": "~5.0",
-    "@angular/compiler": "~5.0",
-    "@angular/core": "~5.0",
-    "moment": "~2.20",
-    "rxjs": "^5.5.2"
+  "version": "1.0.2",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
   },
-  "devDependencies": {
-    "@angular/cli": "1.6.2",
-    "@angular/compiler-cli": "~5.0",
-    "@types/node": "~6.0.60",
-    "@types/moment": "~2.20",
-    "tslint": "~5.7.0",
-    "typescript": "~2.4.2",
-    "moment": "~2.20"
-  },
+  "description": "Tested for angular5",
+  "main": "karma.conf.js",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangta69//ng-moment-pipes.git"
+    "url": "git+https://github.com/wangta69/ng-moment-pipes.git"
   },
   "keywords": [
-    "pipes",
-    "filters",
-    "angular"
+    "moment",
+    "angular",
+    "pipe"
   ],
   "author": "pondol",
   "license": "MIT",
@@ -40,7 +25,7 @@
     "url": "https://github.com/wangta69/ng-moment-pipes/issues"
   },
   "homepage": "https://github.com/wangta69/ng-moment-pipes#readme",
-  "directories": {
-    "test": "test"
+  "peerDependencies": {
+    "moment": "^2.22.2"
   }
 }

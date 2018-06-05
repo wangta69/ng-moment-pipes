@@ -1,13 +1,13 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import * as moment from 'moment';
-
+import moment from 'moment';
+// import * as moment from 'moment';
 /**
 * Format Dates
 * moment("20111031", "YYYYMMDD").fromNow();  // 12 minutes ago
 */
 @Pipe({name: 'momentRelative'})
 export class MomentRelativePipe implements PipeTransform {
-    transform(value: Date|moment.Moment, ...args: any[]): any {
+    transform(value: Date | moment.Moment, ...args: any[]): any {
         let [format] = args;
         //return moment(value).format(format);
         return moment(value, format).fromNow();

@@ -1,5 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import moment from 'moment';
+import * as  _moment from 'moment';
+const moment = _moment;
 // import * as moment from 'moment';
 /**
 * Format Dates
@@ -7,7 +8,7 @@ import moment from 'moment';
 */
 @Pipe({name: 'momentRelative'})
 export class MomentRelativePipe implements PipeTransform {
-    transform(value: Date | moment.Moment, ...args: any[]): any {
+    transform(value: Date | _moment.Moment, ...args: any[]): any {
         const [format] = args;
         return moment(value, format).fromNow();
     }

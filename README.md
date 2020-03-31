@@ -1,5 +1,5 @@
 # ng-moment-pipes
-Tested for angular5
+Tested for angular8
 
 ## Installation
 ```
@@ -19,5 +19,6 @@ import { MomentPipesModule } from 'ng-moment-pipes';
 ``` app.html
 {{datetime | moment : 'YYYY-MM-DD HH:mm'}} <!-- datetime is unixtime like 1592345678 -->
 {{datetime | momentUnix : 'YYYY-MM-DD HH:mm'}}<!-- datetime is normal like 1592345678 -->
+{{datetime | momentLocal : 'YYYY-MM-DD HH:mm'}}<!-- datetime is normal like 1592345678 -->
 {{msg.created_at | momentRelative}}<!--out put will be a hour ago like that -->
 ```

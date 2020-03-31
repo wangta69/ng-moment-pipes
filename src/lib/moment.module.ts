@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MomentPipe } from './moment.pipe';
 import { MomentUnixPipe } from './momentUnix.pipe';
+import { MomentLocalPipe } from './momentLocal.pipe';
 import { MomentRelativePipe,  MomentRelativeOfPipe} from './momentRelative.pipe';
 
 @NgModule({
@@ -8,13 +9,15 @@ import { MomentRelativePipe,  MomentRelativeOfPipe} from './momentRelative.pipe'
     MomentPipe,
     MomentUnixPipe,
     MomentRelativePipe,
-    MomentRelativeOfPipe
+    MomentRelativeOfPipe,
+    MomentLocalPipe
   ],
   exports: [
     MomentPipe,
     MomentUnixPipe,
     MomentRelativePipe,
-    MomentRelativeOfPipe
+    MomentRelativeOfPipe,
+    MomentLocalPipe
   ]
 })
 export class MomentPipesModule {}

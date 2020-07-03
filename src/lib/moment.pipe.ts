@@ -5,7 +5,7 @@ const moment = _moment;
 
 @Pipe({name: 'moment'})
 export class MomentPipe implements PipeTransform {
-    transform(value: Date | _moment.Moment, ...args: any[]): any {
+    public transform(value: Date | _moment.Moment, ...args: any[]): any {
         const [format] = args;
         return moment(value).format(format);
     }

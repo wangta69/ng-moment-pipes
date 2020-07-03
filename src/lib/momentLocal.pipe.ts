@@ -4,7 +4,7 @@ const moment = _moment;
 // utc to local
 @Pipe({name: 'momentLocal'})
 export class MomentLocalPipe implements PipeTransform {
-    transform(value: string, ...args: any[]): any {
+    public transform(value: string, ...args: any[]): any {
         const [format] = args;
         const localTime  = moment.utc(value).toDate();
         return moment(localTime).format(format);
